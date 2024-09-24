@@ -1,0 +1,143 @@
+/* Container for the rice products */
+/* Container for the rice products */
+/* Container for the rice products */
+.rice-product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Grid setup for side-by-side alignment */
+    gap: 20px; /* Space between the product cards */
+    padding: 20px;
+  }
+  
+  /* Style for each rice product card */
+  .rice-product-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Make sure cards take full width within the grid item */
+    max-width: 250px; /* Limit the max width of the cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .rice-product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400x, 1fr));
+    gap: 50px;
+    padding: 40px;
+    justify-items: center;
+  }
+  
+  /* Style for each rice product card */
+  .rice-product-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover effect for the rice card */
+  .rice-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+  }
+  
+  /* Add an animated overlay on hover for rice products */
+  .rice-product-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .rice-product-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Image styling with zoom effect on hover */
+  .rice-product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .rice-product-card:hover .rice-product-image {
+    transform: scale(1.1);
+  }
+  
+  /* Description styling for rice products */
+  .rice-product-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .rice-product-card:hover .rice-product-description {
+    color: #555;
+  }
+  
+  /* Price styling for rice products */
+  .rice-product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2ecc71;
+    transition: color 0.3s ease;
+  }
+  
+  .rice-product-card:hover .rice-product-price {
+    color: #27ae60;
+  }
+  
+  /* Subtle entrance animation for the rice product cards */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .rice-product-card {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  /* Heading styling */
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+    animation: fadeInDown 0.5s ease forwards;
+  }
+  
+  /* Fade-in-down animation for the heading */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
