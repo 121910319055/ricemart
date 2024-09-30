@@ -5,10 +5,11 @@ import './Banner.css';
 
 const Banner = () => {
   const banners = [
-    { id: 1, src: 'bnk1.jpg', alt: 'Banner 1', text: 'Welcome to Our Site' },
+    { id: 1, src: 'bnk1.jpg', alt: 'Banner 1' },
     { id: 2, src: 'bnk2.jpg', alt: 'Banner 2', text: 'Discover Our Products' },
     { id: 3, src: 'bnn3.jpg', alt: 'Banner 3', text: 'Join Our Community' },
-    { id: 4, src: '/images/banner4.jpg', alt: 'Banner 4', text: 'Explore the Future' }, // New Slide for Bounce
+    { id: 4, src: 'bnn4.jpg', alt: 'Banner 4', text: 'Explore the Future' },
+    { id: 5, videoSrc: 'promo.mp4', alt: 'Video Banner', text: 'Watch Our Promo Video' }, // New Video Slide
   ];
 
   return (
@@ -22,7 +23,11 @@ const Banner = () => {
     >
       {banners.map((banner) => (
         <div key={banner.id} className="banner-slide">
-          <img src={banner.src} alt={banner.alt} />
+          {banner.videoSrc ? (
+            <video className="banner-video" src={banner.videoSrc} alt={banner.alt} autoPlay loop muted />
+          ) : (
+            <img src={banner.src} alt={banner.alt} />
+          )}
           <p className="legend">{banner.text}</p>
         </div>
       ))}
